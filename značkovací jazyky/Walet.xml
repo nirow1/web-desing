@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xslt" href="transformace.xslt"?>
+<?xml-model href="Walet.xsd"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Walet.xsd">
+
+<CryptoWalet>   
+   <fiat Type_Of_Holding="Stable coin">
+      <fiatType Shadowed_currency="EURO">
+         <name>eur</name>
+         <priceCZK>26.53</priceCZK>
+         <quantyty>40</quantyty>
+      </fiatType>
+      <fiatType Shadowed_currency="USD">
+         <name>USDT</name>
+         <priceCZK>21.65</priceCZK>
+         <quantyty>108</quantyty>
+      </fiatType>
+      <fiatType Shadowed_currency="USD">
+         <name>USDC</name>
+         <priceCZK>21,65</priceCZK>
+         <quantyty>10</quantyty>
+      </fiatType>
+   </fiat>
+   <longTerm Type_Of_Holding="Save currency">
+      <cryptocurencyL longTerm_savings="1">
+         <name>Bitcoin</name>
+         <tag>BTC</tag>
+         <quantyty>0,021</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="2">
+         <name>Ethereum</name>
+         <tag>ETH</tag>
+         <quantyty>0,541</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="3">
+         <name>Binance Coin</name>
+         <tag>BNB</tag>
+         <quantyty>0,74</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="4">
+         <name>Litecoin</name>
+         <tag>LTC</tag>
+         <quantyty>3,32</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="5">
+         <name>Polkadot</name>
+         <tag>DOT</tag>
+         <quantyty>14,031</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="6">
+         <name>Crypto.com</name>
+         <tag>CRO</tag>
+         <quantyty>221</quantyty>
+      </cryptocurencyL>
+      <cryptocurencyL longTerm_savings="7">
+         <name>Cardano</name>
+         <tag>ADA</tag>
+         <quantyty>856</quantyty>
+      </cryptocurencyL>
+      <staking>
+         <stakedCurrency Exchange="Binance">
+            <name>Binance Coin</name>
+            <tag>BNB</tag>
+            <quantyty>2</quantyty>
+            <est.APY>0.1979</est.APY>
+            <flexible>NO</flexible>
+            <date>19.3.2021</date>
+         </stakedCurrency>
+         <stakedCurrency Exchange="Binance">
+            <name>Bitcoin</name>
+            <tag>BTC</tag>
+            <quantyty>0,01564</quantyty>
+            <est.APY>0.0749</est.APY>
+            <flexible>YES</flexible>
+            <date>6.11.2020</date>
+         </stakedCurrency>
+         <stakedCurrency Exchange="Crypto.com">
+            <name>Crypto.com</name>
+            <tag>CRO</tag>
+            <quantyty>800</quantyty>
+            <est.APY>0.06</est.APY>
+            <flexible>NO</flexible>
+            <date>19.4.2021</date>
+         </stakedCurrency>
+         <stakedCurrency Exchange="Binance">
+            <name>TetherUS</name>
+            <tag>USDT</tag>
+            <quantyty>500</quantyty>
+            <est.APY>0.1</est.APY>
+            <flexible>NO</flexible>
+            <date>11.1.2021</date>
+         </stakedCurrency>
+         <stakedCurrency Exchange="YieldAPP">
+            <name>YieldAPP</name>
+            <tag>YLD</tag>
+            <quantyty>300</quantyty>
+            <est.APY>0.2</est.APY>
+            <flexible>NO</flexible>
+            <date>11.4.2021</date>
+         </stakedCurrency>
+      </staking>
+   </longTerm>
+   <shortTerm Type_Of_Holding="Potentially dangerous">
+      <cryptocurencyS shortTerm_currency="1">
+         <name>Dogecoin</name>
+         <tag>DOGE</tag>
+         <quantyty>1037</quantyty>
+         <Type>coin</Type>
+         <sellPriceUSD>1.0</sellPriceUSD>
+      </cryptocurencyS>
+      <cryptocurencyS shortTerm_currency="3">
+         <name>Chilliz</name>
+         <tag>CHZ</tag>
+         <quantyty>80</quantyty>
+         <Type>Token</Type>
+         <sellPriceUSD>3.0</sellPriceUSD>
+      </cryptocurencyS>
+      <cryptocurencyS shortTerm_currency="4">
+         <name>Chainlink</name>
+         <tag>LINK</tag>
+         <quantyty>5.52</quantyty>
+         <Type>Token</Type>
+         <sellPriceUSD>200.0</sellPriceUSD>
+      </cryptocurencyS>
+      <cryptocurencyS shortTerm_currency="5">
+         <name>ChainGames</name>
+         <tag>CHAIN</tag>
+         <quantyty>100</quantyty>
+         <Type>Token</Type>
+         <sellPriceUSD>2.0</sellPriceUSD>
+      </cryptocurencyS>
+       <cryptocurencyS shortTerm_currency="6">
+         <name>Theta</name>
+         <tag>THETA</tag>
+         <quantyty>10</quantyty>
+         <Type>Coin</Type>
+         <sellPriceUSD>32.0</sellPriceUSD>
+      </cryptocurencyS>
+       <cryptocurencyS shortTerm_currency="7">
+         <name>Aave</name>
+         <tag>AAVE</tag>
+         <quantyty>0.3</quantyty>
+         <Type>Token</Type>
+         <sellPriceUSD>650.0</sellPriceUSD>
+      </cryptocurencyS>
+   </shortTerm>
+</CryptoWalet>

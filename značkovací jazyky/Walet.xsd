@@ -1,0 +1,113 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CryptoWalet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="tag">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="value"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fiat">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fiatType" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="priceCZK"/>
+                    <xs:element type="xs:byte" name="quantyty"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Shadowed_currency" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Type_Of_Holding"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="longTerm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cryptocurencyL" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element name="tag">
+                      <xs:simpleType>
+                        <!-- tag nesmí být menší než 3 písmena a delší než 5 -->
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="3"/>
+                          <xs:maxLength value="5"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="quantyty"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="longTerm_savings" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="staking">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="stakedCurrency" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="name"/>
+                          <xs:element type="xs:string" name="tag"/>
+                          <xs:element type="xs:string" name="quantyty"/>
+                          <xs:element name="est.APY">
+                            <xs:simpleType>
+                            <!-- est.APY musí být mezi 0 a 1 -->
+                              <xs:restriction base="xs:float">
+                                <xs:minInclusive value="0"/>
+                                <xs:maxExclusive value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element name="flexible">
+                            <xs:simpleType>
+                              <!-- odpověď na flexible je pouze ano a nebo ne  -->
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="YES"/>
+                                <xs:enumeration value="NO"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="date"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="Exchange" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Type_Of_Holding"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="shortTerm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cryptocurencyS" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="tag"/>
+                    <xs:element type="xs:float" name="quantyty"/>
+                    <xs:element type="xs:string" name="Type"/>
+                    <xs:element type="xs:float" name="sellPriceUSD"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="shortTerm_currency" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Type_Of_Holding"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

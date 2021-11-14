@@ -1,0 +1,41 @@
+{
+  "name": "CryptoWalet",
+  "tag": "longTerm_savings",
+  "měna": [
+    {
+      "tag": "BNB",
+      "quantyty": "0,74",
+      "name": "jiná měna"
+    },
+    {
+      "tag": "BTC",
+      "quantyty": "0,021",
+      "name": "Bitcoin"
+    },
+    {
+      "tag": "ADA",
+      "quantyty": "856",
+      "name": "jiná měna"
+    },
+    {
+      "tag": "CRO",
+      "quantyty": "221",
+      "name": "jiná měna"
+    },
+    {
+      "tag": "ETH",
+      "quantyty": "0,541",
+      "name": "jiná měna"
+    },
+    {
+      "tag": "LTC",
+      "quantyty": "3,32",
+      "name": "jiná měna"
+    },
+    {
+      "tag": "DOT",
+      "quantyty": "14,031",
+      "name": "jiná měna"
+    }
+  ]
+}
