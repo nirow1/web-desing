@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        height: 92vh;
+        grid-gap: 1vw;
+        padding: 1vw;
+        background-color: rgb(204, 164, 61);
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    letter-spacing: 2px;
+        font-family: Open sans;
+        text-align: center;
+        color: rgb(100, 100, 100);
+    }
+    .big{ font-size: 3rem;}
+    .medium1{ font-size: 1.5rem;}
+    .medium3{ font-size: 1.5rem;}
+    .small1{ font-size: 1.5rem;}
+    .small2{ font-size: 1.3rem;}
+
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "big big "
+        "medium1 medium1"
+        "medium2 medium2"
+        "medium3 medium3"
+        "small1 small2"
+        "small3 small4"
+        "small5 small6"
+        
+    }
+
+    @media screen and (min-width: 450px) {
+        .grid {
+            transition: 200ms;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "big big big"
+            "big big big"
+            "medium1 medium2 medium3"
+            "medium1 medium2 medium3"
+            "small1 small2 small3"
+            "small4 small5 small6"
+            
+        }
+    }
+    
+    
+    @media screen and (min-width: 850px) {
+        .grid {
+            padding-left: 5%;
+            padding-right: 5%;
+            transition: 200ms;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "big big medium1 medium1"
+            "big big medium2 medium2"
+            "small1 small2 small3 medium3"
+            "small4 small5 small6 medium3"
+            
+        }
+
+        .big{ font-size: 4rem;}
+        .medium1{ font-size: 0;}
+        .medium3{ font-size: 0;}
+        .small1{ font-size: 0;}
+        .small2{ font-size: 0;}
+        .small3{ font-size: 0;}
+        .small4{font-size: 0;}
+        .small5{ font-size: 1.8rem;}
+        .small6{ font-size: 2rem;}
+    }
+}
+
+.big{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    color: rgb(143 143 143);
+
+    background: url(coiny.JPG) center no-repeat;
+    grid-area: big;
+    border-radius: 0.5rem;
+}
+.medium1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url(eth-33.png) center no-repeat;
+    grid-area: medium1;
+    border-radius: 0.5rem;
+}
+.medium2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: url(nftsedit.png) center no-repeat;
+    grid-area: medium2;
+    border-radius: 0.5rem;
+}
+.medium3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: url(bitcoinnav.png) center no-repeat;
+    grid-area: medium3;
+    border-radius: 0.5rem;
+}
+.small1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color:rgb(230, 227, 222);
+
+    background: url(solana2.png) center no-repeat;
+    grid-area: small1;
+    border-radius: 0.5rem;
+}
+.small2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(215, 220, 226);
+    padding-top: 4.5rem;
+    
+    background:url(cardano.png) center no-repeat;
+    grid-area: small2;
+    border-radius: 0.5rem;
+}
+.small3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:url(polkadot.png) center no-repeat;
+    grid-area: small3;
+    border-radius: 0.5rem;
+}
+.small4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background:url(avax.png) center no-repeat;
+    grid-area: small4;
+    border-radius: 0.5rem;
+}
+.small5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background:url(exchanges.png) center no-repeat;
+    grid-area: small5;
+    border-radius: 0.5rem;
+}
+.small6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: url(altcoins2.png) center no-repeat;
+    grid-area: small6;
+    border-radius: 0.5rem;
+}
